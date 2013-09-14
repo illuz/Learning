@@ -1,0 +1,64 @@
+CREATE DATABASE SaleManager
+ON 
+PRIMARY
+	( NAME = prim,
+    FILENAME = 'G:\\Sale\\Prim.mdf',
+    SIZE = 5MB,
+    MAXSIZE = 10MB,
+    FILEGROWTH = 2MB ),
+	( NAME = snd,
+	FILENAME = 'G:\\Sale\\snd.ndf',
+	SIZE = 2MB,
+	MAXSIZE = 15MB,
+	FILEGROWTH = 10% )
+LOG ON
+	( NAME = lg,
+    FILENAME = 'G:\\Sale\\lg.ldf',
+    SIZE = 1MB,
+    MAXSIZE = 10MB,
+    FILEGROWTH = 1MB )
+;
+
+
+
+USE master;
+GO
+ALTER DATABASE SaleManager
+MODIFY FILE
+	( NAME = prim,
+	SIZE = 8MB );
+GO
+
+
+
+
+
+
+
+USE master;
+GO
+ALTER DATABASE SaleManager
+REMOVE FILE snd;
+GO
+
+
+
+
+
+USE master;
+GO
+ALTER DATABASE SaleManager
+ADD FILE
+(
+	NAME = sale3,
+	FILENAME = 'G:\\sale\\sale3.ndf',
+	SIZE = 4,
+	MAXSIZE = 10,
+	FILEGROWTH = 10%
+)
+GO
+
+
+
+DROP DATABASE SaleManager;
+
