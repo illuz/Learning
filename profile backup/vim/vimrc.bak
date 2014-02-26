@@ -109,3 +109,11 @@ set backspace=indent,eol,start
 " nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " 用空格键来开关折叠
 
+imap jk <esc>:w<CR>
+imap kj <esc>:w<CR>
+imap jK <esc>:w<CR>
+imap kJ <esc>:w<CR>
+imap JK <esc>:w<CR>
+imap KJ <esc>:w<CR>
+imap Jk <esc>:w<CR>
+imap Kj <esc>:w<CR>
