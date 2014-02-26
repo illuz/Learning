@@ -44,12 +44,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -87,29 +87,21 @@ alias la='ls -A'
 alias l='ls -CF'
 alias tcc='javaws /home/illuz/code/TopCoder/ContestAppletProd.jnlp &'
 alias tc='cd /home/illuz/code/TopCoder'
-alias cc='cd /home/illuz/code/CodeChef;op codechef.com'
 alias fq='nohup python /home/illuz/install/goagent-3.0/local/proxy.py &'
-alias jx='cd /home/illuz/code/jixun'
-alias cf='cd /home/illuz/code/CodeForces;op codeforces.com'
 alias bash='vim ~/.bashrc'
 alias sr='source ~/.bashrc'
-alias op='/usr/bin/google-chrome'
 alias g='g++ -g'
 alias d='./a.out < in'
 alias b='gdb a.out'
 alias o='d >out; vim out'
 alias s='sublime-text '
 alias I='vim in'
-alias hw='cd /home/illuz/code/jixun/homework/'
-alias py='cd /home/illuz/code/python; python'
-alias e='xdg-open .'
-alias big='cd /home/illuz/code/jixun/bigBigHole'
-alias dp='cd /home/illuz/code/jixun/dp'
-alias hr='cd /home/illuz/code/hackerRank'
-alias a='cd /home/illuz/code/'
+alias e='nautilus .'
 alias gg='cd /home/illuz/git'
 alias ggg='cd /home/illuz/git2'
 alias cg='cd ~/.vim/templates; mv tpl.cpp tpl.p; mv tpl.tpp tpl.cpp; mv tpl.p tpl.tpp; cd -'
+alias uva='cd ~/git/ACM_CODE/Training\ Guide'
+alias cf='cd ~/git/CodeForces'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -135,3 +127,6 @@ export JAVA_HOME=/usr/local/java/jdk1.7.0_40
 export JRE_HOME=/usr/local/java/jdk1.7.0_40/jre
 export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
 export PATH=/usr/local/java/jdk1.7.0_40/bin:$PATH
+
+# git autofill
+source ~/.git-completion.bash

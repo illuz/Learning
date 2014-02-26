@@ -6,12 +6,11 @@
 *  Descripton:   <T_CURSOR>
 */
 
-#include <iostream>
-#include <cstdio>
-#include <cstring>
-using namespace std;
+import java.util.Scanner;
 
-int main() {
+public class Main {
 
-	return 0;
+	public static void main(String[] args) {
+
+	}
 }
