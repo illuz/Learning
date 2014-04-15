@@ -3,7 +3,10 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -28,7 +31,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
@@ -44,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
-    color_prompt=yes
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
     else
-    color_prompt=
+	color_prompt=
     fi
 fi
 
@@ -85,23 +88,27 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias tcc='javaws /home/illuz/code/TopCoder/ContestAppletProd.jnlp &'
-alias tc='cd /home/illuz/code/TopCoder'
-alias fq='nohup python /home/illuz/install/goagent-3.0/local/proxy.py &'
+
 alias bash='vim ~/.bashrc'
 alias sr='source ~/.bashrc'
 alias g='g++ -g'
 alias d='./a.out < in'
 alias b='gdb a.out'
 alias o='d >out; vim out'
-alias s='sublime-text '
+alias s='sublime'
 alias I='vim in'
-alias e='nautilus .'
-alias gg='cd /home/illuz/git'
-alias ggg='cd /home/illuz/git2'
-alias cg='cd ~/.vim/templates; mv tpl.cpp tpl.p; mv tpl.tpp tpl.cpp; mv tpl.p tpl.tpp; cd -'
-alias uva='cd ~/git/ACM_CODE/Training\ Guide'
-alias cf='cd ~/git/CodeForces'
+# alias e='nautilus .'
+alias e='xdg-open . &'
+alias uva='cd ~/WayToACM/ACM_CODE/lrj_Training_Guide'
+alias cf='cd ~/WayToACM/CodeForces/'
+alias acm='cd ~/WayToACM/ACM_CODE'
+alias k='kate '
+alias work='~/workit/what_to_work'
+
+alias kart='cd /opt/supertuxkart-0.8.1-2-linux-glibc2.11-x86-64/; ./run_game.sh'
+alias mugen='cd /home/illuz/Install/mugen/; ./mugen'
+alias qqdir='cd ~/.longene/tm2013/drive_c/Program Files/Tencent/tm2013/Users'
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -119,14 +126,18 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  fi
 fi
-#java
-export JAVA_HOME=/usr/local/java/jdk1.7.0_40
-export JRE_HOME=/usr/local/java/jdk1.7.0_40/jre
-export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
-export PATH=/usr/local/java/jdk1.7.0_40/bin:$PATH
 
-# git autofill
+#java
+#export JAVA_HOME=/usr/local/java/jdk1.7.0_51
+#export JRE_HOME=/usr/local/java/jdk1.7.0_51/jre
+#export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
+#export PATH=/usr/local/java/jdk1.7.0_51/bin:$PATH
+
 source ~/.git-completion.bash

@@ -45,6 +45,8 @@ using namespace std;
 #define sqr(x) ((x)*(x))
 #define FI(i,x) for(typeof((x).begin()) i=(x).begin();i!=(x).end();i++)
 /****************************/
+#define fi firsst
+#define sd second
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int, int> PII;
@@ -60,7 +62,8 @@ const int fy[] = {-1,0,1,-1,1,-1,0,1};
 
 const int N = 0;
 
-int main() {
+int main()
+{
 
 	return 0;
 }
