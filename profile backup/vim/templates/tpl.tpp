@@ -9,7 +9,12 @@
 #include <iostream>
 #include <cstdio>
 #include <cstring>
+#include <algorithm>
 using namespace std;
+
+typedef long long ll;
+
+const int N = 0;
 
 int main() {
 
