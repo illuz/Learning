@@ -1,0 +1,12 @@
+.
+├── scrapy.cfg
+├── totorial
+│   ├── __init__.py
+│   ├── items.py
+│   ├── pipelines.py
+│   ├── settings.py
+│   └── spiders
+│       └── __init__.py
+└── tree.txt
+
+2 directories, 7 files
