@@ -13,7 +13,7 @@ set undodir=$HOME/.vim/undos
 syntax on
 syntax enable
 set encoding=utf-8
-set fileencodings=utf-8,gb2312,ucs-bom,euc-cn,euc-tw,gb18030,gbk,cp936,latin1
+set fileencodings=utf-8,gb2312,ucs-bom,euc-cn,euc-tw,gb18030,gbk,cp936,latin1,big5
 
 "set smartindent
 "set cindent
@@ -25,7 +25,8 @@ filetype plugin indent on
 " tab
 set shiftwidth=4
 set tabstop=4
-set softtabstop=4
+" set softtabstop=4
+set expandtab
 
 set backspace=indent,eol,start
 
@@ -45,6 +46,8 @@ set t_vb= " 置空错误铃声的终端代码
 set hidden " 允许在有未保存的修改时切换缓冲区，此时的修改由 vim 负责保存
 "set magic " 设置魔术
 "set nowrapscan " 禁止在搜索到文件两端时重新搜索
+
+set mouse=a
 
 " imap
 imap jk <esc>:w<CR>
@@ -68,3 +71,12 @@ let g:T_DATE_FORMAT = "%c"
 "gvim
 "set guioptions-=T " 隐藏工具栏
 "set guioptions-=m " 隐藏菜单栏
+
+
+" add colorscheme
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
