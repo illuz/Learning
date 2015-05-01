@@ -8,3 +8,4 @@ Well, there is already a project of [hacking github contributions](https://githu
 ===
 
 Test git in new PC.
+test
