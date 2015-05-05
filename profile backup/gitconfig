@@ -1,0 +1,19 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = "commit -m"
+	st = status
+	ps = push
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[user]
+	name = illuz
+	email = iilluzen@gmail.com
+[push]
+	default = matching
+	ci = "commit -m "
+	ps = push origin master
+[http]
+	proxy = socks5://127.0.0.1:1080
+[https]
+	proxy = socks5://127.0.0.1:1080
