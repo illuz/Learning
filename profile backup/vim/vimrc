@@ -73,10 +73,8 @@ let g:T_DATE_FORMAT = "%c"
 "set guioptions-=m " 隐藏菜单栏
 
 
-" add colorscheme
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
 
+" Solarized stuff
+let g:solarized_termtrans = 1
+set background=dark
+colorscheme solarized
