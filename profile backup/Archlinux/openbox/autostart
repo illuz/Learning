@@ -1,0 +1,29 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+tint2 &
+xcompmgr -c &
+
+sh ~/.config/tint2/wallpaper.sh &
+conky &
+
+# (sleep 20s && ~/.dropbox-dist/dropboxd) &
+
+# all terminal transparent ('xprop WM_CLASS' to find class)
+# (sleep 2s && while true; do for wid in $(xdotool search --class xfce4-terminal\|sublime_text\|kwrite); do transset-df --id $wid 0.65 &>/dev/null; done; sleep 3; done) &
+(sleep 2s && while true; do for wid in $(xdotool search --class sublime_text\|kwrite); do transset-df --id $wid 0.65 &>/dev/null; done; sleep 3; done) &
