@@ -25,5 +25,4 @@ conky &
 # (sleep 20s && ~/.dropbox-dist/dropboxd) &
 
 # all terminal transparent ('xprop WM_CLASS' to find class)
-# (sleep 2s && while true; do for wid in $(xdotool search --class xfce4-terminal\|sublime_text\|kwrite); do transset-df --id $wid 0.65 &>/dev/null; done; sleep 3; done) &
-(sleep 2s && while true; do for wid in $(xdotool search --class sublime_text\|kwrite); do transset-df --id $wid 0.65 &>/dev/null; done; sleep 3; done) &
+(sleep 2s && while true; do for wid in $(xdotool search --class xfce4-terminal\|sublime_text\|kwrite); do transset-df --id $wid 0.65 &>/dev/null; done; sleep 3; done) &
