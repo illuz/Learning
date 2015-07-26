@@ -47,7 +47,7 @@ set hidden " 允许在有未保存的修改时切换缓冲区，此时的修改�
 "set magic " 设置魔术
 "set nowrapscan " 禁止在搜索到文件两端时重新搜索
 
-set mouse=a
+" set mouse=a
 
 " imap
 imap jk <esc>:w<CR>
@@ -67,6 +67,13 @@ let g:T_AUTHOR = "illuz"
 let g:T_AUTHOR_EMAIL = "iilluzen[at]gmail.com"
 let g:T_AUTHOR_WEBSITE = "http://blog.csdn.net/hcbbt"
 let g:T_DATE_FORMAT = "%c"
+
+" Stop using the h, j, k, l keys!
+" Like http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/ says
+noremap h <NOP>
+noremap j <NOP>
+noremap k <NOP>
+noremap l <NOP>
 
 "gvim
 "set guioptions-=T " 隐藏工具栏
