@@ -70,10 +70,10 @@ let g:T_DATE_FORMAT = "%c"
 
 " Stop using the h, j, k, l keys!
 " Like http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/ says
-noremap h <NOP>
-noremap j <NOP>
-noremap k <NOP>
-noremap l <NOP>
+" noremap h <NOP>
+" noremap j <NOP>
+" noremap k <NOP>
+" noremap l <NOP>
 
 "gvim
 "set guioptions-=T " 隐藏工具栏
